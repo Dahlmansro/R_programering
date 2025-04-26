@@ -1,77 +1,66 @@
-Kunskapskontroll - Dataanlays i R
+# Knowledge Assessment - Data Analysis in R
 
-Projektbeskrivning
+## 🚗 Used Volkswagen Price Prediction
 
-Detta projekt syftar till att prediktera försäljningspriser på begagnade Volkswagenbilar. Målet är att bygga och utvärdera en prediktiv modell.
+### Project Description
+This project aims to predict the selling prices of used Volkswagen cars. The goal is to build and evaluate a predictive model using various data analysis techniques in R.
 
-Projektet ingår som en del av en kunskapskontroll inom ramen för studier i dataanalys/data science.
+The project is part of a knowledge assessment within the framework of studies in data analysis/data science.
 
-Beskrivning av mappar
+### 📁 Repository Structure
 
-Data/: Här lagras rådatafiler (t.ex. Excel, CSV). Även bearbetade versioner sparas här.
+* **Data/**: Storage for raw data files (e.g., Excel, CSV). Processed versions are also saved here.
+* **Models/**: Saved models, such as trained regression models in .rds format.
+* **Script/**: All R scripts, organized by purpose:
+  * `00_packages.R`: Setup and installation of required packages
+  * `01_data_cleaning.R`: Data preparation and cleaning
+  * `02_eda.R`: Exploratory data analysis
+  * `03_data_modeling.R`: Creating the regression models
+  * `04_model_diagnostics.R`: Evaluating model performance
+  * `05_model_selection.R`: Comparing and selecting the best model
+  * `06_model_testing.R`: Testing the selected model
+  * `07_predict_new_data.R`: Using the model for predictions
+  * `SCB API: Use to download data
+* **Visualizations/**: Finalized graphs and charts (PNG or PDF format).
 
-Modeller/: Sparade modeller, t.ex. tränade regressionsmodeller i .rds-format.
+### 📊 Used R Packages
 
-Script/: Alla R-skript, uppdelade efter syfte.
+```r
+# Core data manipulation and visualization
+library(tidyverse)
+library(ggplot2)
+library(readxl)
+library(stringr)
 
-Visualiseringar/: Färdiga grafer sparas här (t.ex. PNG eller PDF).
+# Data retrieval
+library(httr)
+library(jsonlite)
+library(pxweb)
+library(lubridate)
 
-SCB/: API till SCB samt data nybilsförsäljning
+# Analysis and modeling
+library(corrplot)
+library(caret)
+library(MASS)
+library(lmtest)
+library(car)
+```
 
-Använda paket
+See `Script/install_packages.R` for installation of necessary packages.
 
-Projektet använder följande R-paket:
+### 🚀 How to Run the Project
 
-tidyverse
+1. Open `Kunskapskontroll.Rproj` in RStudio.
+2. Run the scripts in `Script/` in the following order:
+   * `00_packages.R`
+   * `01_data_cleaning.R`
+   * `02_eda.R`
+   * `03_data_modeling.R`
+   * `04_model_diagnostics.R`
+   * `05_model_selection.R`
+   * `06_model_testing.R`
+   * `07_predict_new_data.R`
 
-httr
+### 📞 Contact
 
-jsonlite
-
-pxweb
-
-lubridate
-
-ggplot2
-
-readxl
-
-stringr
-
-corrplot
-
-caret
-
-MASS
-
-lmtest
-
-car
-
-Se Script/install_packages.R för installation av nödvändiga paket.
-
-Hur man kör projektet
-
-Öppna Kunskapskontroll.Rproj i RStudio.
-
-Kör skripten i Script/ i följande ordning:
-
-00_packages.R
-
-01_data_cleaning.R
-
-02_eda.R
-
-03_data_modeling.R
-
-04_model_diagnostics.R
-
-05_model_selection.R
-
-06_model_testing.R
-
-07_predict_new_data.R
-
-Kontakt
-
-För frågor, kontakta camilla.dahlman@utb.ecutbildning.se
+For questions, please contact: camilla.dahlman@utb.ecutbildning.se
