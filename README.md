@@ -20,7 +20,7 @@ The project is part of a knowledge assessment within the framework of studies in
   * `05_model_selection.R`: Comparing and selecting the best model
   * `06_model_testing.R`: Testing the selected model
   * `07_predict_new_data.R`: Using the model for predictions
-  * `SCB API: Use to download data
+  * `SCB API`: Use to download data
 * **Visualizations/**: Finalized graphs and charts (PNG or PDF format).
 
 ### 📊 Used R Packages
